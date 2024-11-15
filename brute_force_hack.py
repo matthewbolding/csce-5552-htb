@@ -29,7 +29,9 @@ range_end = 2**21
 
 found = False
 for i in tqdm(range(range_start, range_end), desc="Outer loop"):
-    for j in range(i, range_end):
+    # i = 1426925
+    for j in tqdm(range(i, range_end), desc="Inner loop"):
+        # j = 1962429
         product = i * j
         if rsa_encrypt(product) == rsa_encrypted_key:
             key1, key2 = i, j
