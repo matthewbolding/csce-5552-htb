@@ -22,7 +22,7 @@ def rsa_encrypt(value):
 # Brute-force approach using a nested loop
 key1, key2 = 0, 0
 range_start = 2**20
-range_end = 2**21
+range_end = 2**21 + 1
 
 # i = 1426925
 # j = 1962429
