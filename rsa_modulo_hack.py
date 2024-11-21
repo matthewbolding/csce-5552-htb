@@ -24,7 +24,7 @@ rsa_encrypted_values = set()
 value_dict = {}
 
 # Generate possible values of RSA encryption for the range 2**20 to 2**21
-for i in trange(2**20, 2**21, desc="Generating RSA-Encrypted Values"):
+for i in trange(2**20, 2**21 + 1, desc="Generating RSA-Encrypted Values"):
     encrypted_value = rsa_encrypt(i)
     rsa_encrypted_values.add(encrypted_value)
 
